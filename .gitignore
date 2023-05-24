@@ -1,2 +1,4 @@
 node_modules/
 binaries/
+yarn.lock
+yarn-error.log
