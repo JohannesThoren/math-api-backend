@@ -1,0 +1,80 @@
+[
+  {
+    "route": "/plot",
+    "description": "",
+    "subroutes": [
+      {
+        "methods": ["get"],
+        "route": "/xdependent",
+        "usage": "plot a graph depending on the x-axis",
+        "description": "This enpoint will return a image of a graph given that you have provided a valid equiation. Else an error will be returned",
+        "body": [
+          {
+            "name": "eq",
+            "valueType": "string", 
+            "description": "the equation to plot"
+          },
+          {
+            "name": "ymin",
+            "valueType": "int",
+            "description": "minimum y value"
+          },
+          {
+            "name": "ymax",
+            "valueType": "int",
+            "description": "maximum y value"
+          },
+          {
+            "name": "xmin",
+            "valueType": "int",
+            "description": "minimum x value"
+          },
+          {
+            "name": "xmax",
+            "valueType": "int",
+            "description": "maximum x value"
+          },
+          {
+            "name": "w",
+            "valueType": "int",
+            "description": "width of the image"
+          },
+          {
+            "name": "h",
+            "valueType": "int",
+            "description": "height of the image"
+          }
+        ],
+        "example": []
+      },
+      {
+        "methods": ["post", "get"],
+        "route": "/ydependent",
+        "usage": "plot a graph depending on the y-axis",
+        "description": "",
+        "example": []
+      },
+      {
+        "methods": ["post", "get"],
+        "route": "/xydependent",
+        "usage": "plot a graph depending on the x- and y-axis",
+        "description": "",
+        "example": []
+      }
+    ]
+  },
+
+  {
+    "route": "/solve",
+    "description": "",
+    "subroutes": [
+      {
+        "methods": ["post", "get"],
+        "route": "/expression",
+        "usage": "solves a simple expression",
+        "description": "",
+        "example": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "name": "math-api",
+  "version": "1.0.0",
+  "description": "A api that can solve different math problems",
+  "main": "index.js",
+  "author": "Johannes Thorén, Ludwig Bogsveen",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-route-grouping": "^1.1.1"
+  },
+  "scripts": {
+    "serve": "node index"
+  }
+}

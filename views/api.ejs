@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Documentation</title>
+  <link rel="stylesheet" href="/static/style/style.css" />
+</head>
+
+<body>
+  <main>
+    <h1>/api/v1</h1>
+    <article>
+
+
+      <% docs.forEach(route=> { %>
+        <div id="<%= route.route %>">
+          <h2 class="header">
+            <%= route.route %>
+          </h2>
+          <% route.subroutes.forEach(subroute=> { %>
+
+            <details id="<%= subroute.route %>">
+              <summary>
+                <% subroute.methods.forEach(method=> { %>
+                  <span class="method <%= method %>">
+                    <%= method %>
+                  </span>
+                  <% }) %>
+                    <span class="route">
+                      <%= subroute.route %>
+                    </span>
+
+                    <span class="usage">
+                      <%= subroute.usage %>
+                    </span>
+
+              </summary>
+
+              <%if(subroute.description) {%>
+                <div>
+                  <h4>Description</h4>
+                  <%= subroute.description %>
+                </div>
+                <%}%>
+
+                  <%if(subroute.body) {%>
+                    <div>
+                      <h4>Body params</h4>
+                      <ul>
+                        <% subroute.body.forEach(param=> { %>
+                          <li>
+                            <span><strong>
+                                <%= param.name %>
+                              </strong></span>: <span><em>
+                                <%= param.valueType %>
+                              </em></span> - <%= param.description %>
+                          </li>
+                          <% }) %>
+                      </ul>
+                    </div>
+                    <%}%>
+                      <%if(subroute.examples) {%>
+
+                        <div>
+                          <h4>Examples</h4>
+
+                        </div>
+                        <%}%>
+
+            </details>
+
+            <% }) %>
+        </div>
+        <% }) %>
+
+    </article>
+
+</html>

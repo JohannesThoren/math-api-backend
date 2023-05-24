@@ -1,0 +1,37 @@
+h1,h2,h3,h4,h5,h6,p,div {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.header {
+    padding: .2rem;
+    background-color: grey;
+}
+
+article > div > details {
+    padding:.5rem;
+    background-color: lightgray;
+    border-bottom: solid grey 1px;
+}
+
+.method {
+    display: inline-block;
+}
+
+.post {
+    color: red;
+}
+
+.get {
+    color: blue;
+}
+
+
+summary {font-size: 1.4rem;}
+
+.route {font-weight: 800;}
+
+li > ul {margin-left: .5rem;}
+
+li {margin-left: 1rem;}
